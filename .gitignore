@@ -21,3 +21,4 @@ olddata
 *.zip
 output_flow/
 exp_data/
+**/.DS_Store
