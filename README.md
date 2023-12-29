@@ -2,6 +2,8 @@
 
 [[Project Page]](https://vita-group.github.io/4DGen/) | [[Video]](https://www.youtube.com/watch?v=-bXyBKdpQ1o)
 
+![overview](https://raw.githubusercontent.com/VITA-Group/4DGen/main/docs/static/media/task.a51c143187610723eb8f.png)
+
 ## Setup
 
 Please follow the [3D-GS](https://github.com/graphdeco-inria/gaussian-splatting) and to install the related packages.
@@ -49,7 +51,7 @@ python train.py --configs arguments/i2v.py -e rose
 ## Rendering
 
 ```bash
-python render.py --skip_train --configs arguments/ours/i2v_xdj.py --skip_test --model_path "./output/xxxx/"
+python render.py --skip_train --configs arguments/i2v.py --skip_test --model_path "./output/xxxx/"
 ```
 
 ## Acknowledgement
