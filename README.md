@@ -1,6 +1,6 @@
 # 4DGen: Grounded 4D Content Generation with Spatial-temporal Consistency
 
-[[Project Page]](https://vita-group.github.io/4DGen/) | [[Video (narrated)]](https://www.youtube.com/watch?v=-bXyBKdpQ1o) | [[Video (results only)]](https://www.youtube.com/watch?v=Hbava1VpeXY) | [[Paper]](https://github.com/VITA-Group/4DGen/blob/main/4dgen.pdf)
+[[Project Page]](https://vita-group.github.io/4DGen/) | [[Video (narrated)]](https://www.youtube.com/watch?v=-bXyBKdpQ1o) | [[Video (results only)]](https://www.youtube.com/watch?v=Hbava1VpeXY) | [[Paper]](https://github.com/VITA-Group/4DGen/blob/main/4dgen.pdf) | [[Arxiv]](https://arxiv.org/abs/2312.17225)
 
 ![overview](https://raw.githubusercontent.com/VITA-Group/4DGen/main/docs/static/media/task.a51c143187610723eb8f.png)
 
@@ -69,7 +69,7 @@ If you find this repository/work helpful in your research, please consider citin
 @article{yin20234dgen,
   title={4DGen: Grounded 4D Content Generation with Spatial-temporal Consistency},
   author={},
-  journal={arXiv preprint},
+  journal={arXiv preprint: 2312.17225},
   year={2023}
 }}
 ```
