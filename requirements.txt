@@ -1,0 +1,12 @@
+mmcv==1.6.0
+matplotlib
+argparse
+lpips
+plyfile
+imageio-ffmpeg
+transformers
+diffusers
+accelerate
+tensorboard
+imageio
+opencv-python
