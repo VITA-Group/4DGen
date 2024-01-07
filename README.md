@@ -1,4 +1,5 @@
 # 4DGen: Grounded 4D Content Generation with Spatial-temporal Consistency
+Authors: Yuyang Yin, Dejia Xu, Zhangyang Wang, Yao Zhao, Yunchao Wei
 
 [[Project Page]](https://vita-group.github.io/4DGen/) | [[Video (narrated)]](https://www.youtube.com/watch?v=-bXyBKdpQ1o) | [[Video (results only)]](https://www.youtube.com/watch?v=Hbava1VpeXY) | [[Paper]](https://github.com/VITA-Group/4DGen/blob/main/4dgen.pdf) | [[Arxiv]](https://arxiv.org/abs/2312.17225)
 
@@ -52,6 +53,18 @@ python train.py --configs arguments/i2v.py -e rose
 python render.py --skip_train --configs arguments/i2v.py --skip_test --model_path "./output/xxxx/"
 ```
 
+
+
+## Evaluation
+As for CLIP loss, we calculate clip distance loss between rendered images and reference images. The refernce images are n frames. The rendered images are 10 viewpoints in each timestep. 
+
+As for CLIP-T loss, we choose to also measure CLIP-T distance at different viewpoint, not only for the frontal view but also for the back and side views.
+
+```bash
+cd evaluation
+bash eval.bash  #please change file paths before running
+```
+
 ## Acknowledgement
 
 This work is built on many amazing research works and open-source projects, thanks a lot to all the authors for sharing!
@@ -68,8 +81,8 @@ If you find this repository/work helpful in your research, please consider citin
 ```
 @article{yin20234dgen,
   title={4DGen: Grounded 4D Content Generation with Spatial-temporal Consistency},
-  author={},
-  journal={arXiv preprint: 2312.17225},
+  author={Yin, Yuyang and Xu, Dejia and Wang, Zhangyang and Zhao, Yao and Wei, Yunchao},
+  journal={arXiv preprint arXiv:2312.17225},
   year={2023}
 }}
 ```
