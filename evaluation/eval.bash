@@ -56,7 +56,7 @@ for ((i = 0; i < ${#clip_gt_list_data_path[@]}; i++)); do
     pred_list_data_path="${clip_pred_list_data_path[$i]}"
     dataset="${Dataset[$i]}"
 
-    CUDA_VISIBLE_DEVICES="5" python evaluation.py  --model 'clip' --gt_list_data_path $gt_list_data_path --pred_list_data_path $pred_list_data_path --dataset $dataset
+    python evaluation.py  --model 'clip' --gt_list_data_path $gt_list_data_path --pred_list_data_path $pred_list_data_path --dataset $dataset
 done
 
 
@@ -65,7 +65,7 @@ for ((i = 0; i < ${#clip_gt_list_data_path[@]}; i++)); do
     pred_list_data_path="${clip_12345_pred_list_data_path[$i]}"
     dataset="${Dataset_12345[$i]}"
 
-    CUDA_VISIBLE_DEVICES="5" python evaluation.py  --model 'clip' --gt_list_data_path $gt_list_data_path --pred_list_data_path $pred_list_data_path --dataset $dataset
+    python evaluation.py  --model 'clip' --gt_list_data_path $gt_list_data_path --pred_list_data_path $pred_list_data_path --dataset $dataset
 done
 
 for ((i = 0; i < ${#clip_gt_list_data_path[@]}; i++)); do
@@ -73,7 +73,7 @@ for ((i = 0; i < ${#clip_gt_list_data_path[@]}; i++)); do
     pred_list_data_path="${clip_dr_pred_list_data_path[$i]}"
     dataset="${Dataset_dr[$i]}"
 
-    CUDA_VISIBLE_DEVICES="5" python evaluation.py  --model 'clip' --gt_list_data_path $gt_list_data_path --pred_list_data_path $pred_list_data_path --dataset $dataset
+    python evaluation.py  --model 'clip' --gt_list_data_path $gt_list_data_path --pred_list_data_path $pred_list_data_path --dataset $dataset
 done
 
 
