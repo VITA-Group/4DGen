@@ -199,32 +199,6 @@ class Eval():
             with open('/home/yyy/data/4dgen_exp_pl/4dgen_exp/CLIP_Loss/output.txt', 'a+') as file:
                 file.write(save_data)
             
-    def CLIP_con4d(self,gt_list_data_path,pred_list_data_path,name=None):
-        gt_data=glob.glob(f'{gt_list_data_path}/*.png')
-        gt_data=sorted(gt_data,key=lambda info: (int(info.split('/')[-1].split('.')[0])))
-        len_gt=len(gt_data)
-        
-        loss_all_frame=0
-        for i in range(16):
-            pred_path=pred_list_data_path+'/'+str(i)
-            pred_data=glob.glob(f'{pred_path}/*.png')
-            pred_data=sorted(pred_data,key=lambda info: (int(info.split('/')[-1].split('.')[0])))
-            len_pred=len(pred_data)
-            
-            loss_one_frame=0
-            for j in range(len_pred):
-                loss=self.clip.single_image(gt_data[i],pred_data[j])
-                loss_one_frame+=loss
-            loss_one_frame_avg=loss_one_frame/len_pred
-            loss_all_frame+=loss_one_frame_avg
-        loss_all_frame_avg=loss_all_frame/len_gt
-        
-        if name!=None:
-            print('Datset:',name,"   clip:",loss_all_frame_avg)
-            save_data='Datset:'+name+"   clip:"+str(loss_all_frame_avg)+'\n'
-            with open('/home/yyy/data/4dgen_exp_pl/4dgen_exp/CLIP_Loss/output.txt', 'a+') as file:
-                file.write(save_data)
-        
 if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("--model",default='clip', type=str)
