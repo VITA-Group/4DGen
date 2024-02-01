@@ -5,6 +5,14 @@ Authors: Yuyang Yin, Dejia Xu, Zhangyang Wang, Yao Zhao, Yunchao Wei
 
 ![overview](https://raw.githubusercontent.com/VITA-Group/4DGen/main/docs/static/media/task.a51c143187610723eb8f.png)
 
+
+## News
+- `2023/12/28`  Release code and paper.
+- `2024/2/1`   Enhance the coherence of the video outputs in low fps.
+- `2024/2/1`   Update text-to-4d and image-to-4d functions and cases.
+
+
+
 ## Setup
 
 ```bash

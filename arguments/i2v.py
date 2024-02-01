@@ -44,8 +44,6 @@ ModelHiddenParams = dict(
      'grid_dimensions': 2,
      'input_coordinate_dim': 4,
      'output_coordinate_dim': 32,
-     #'resolution': [32,32,32,32],
-     'resolution': [64, 64, 64, 64]
-    #  'resolution': [64, 64, 64, 150]
+     'resolution': [64, 64, 64, 8]  #8 is frame numbers/2
     }
 )
