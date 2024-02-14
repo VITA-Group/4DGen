@@ -22,3 +22,7 @@ olddata
 output_flow/
 exp_data/
 **/.DS_Store
+arguments/i2v.py
+train.py
+guidance/zero123_utils.py
+output

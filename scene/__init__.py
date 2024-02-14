@@ -52,6 +52,7 @@ class Scene:
             ds = ImageDreamdataset
         else:
             ds = FourDGSdataset
+        print('args.frame_num:',args.frame_num)
         self.train_camera = ds(split='train', frame_num=args.frame_num,name=args.name,rife=args.rife,static=args.static)
         print("Loading Test Cameras")
         self.maxtime = self.train_camera.pose0_num

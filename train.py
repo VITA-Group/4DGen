@@ -36,7 +36,7 @@ from guidance.zero123_utils import Zero123
 
 from PIL import Image
 from torchvision.transforms import ToTensor
-from kaolin.metrics.pointcloud import chamfer_distance
+# from kaolin.metrics.pointcloud import chamfer_distance
 from plyfile import PlyData
 
 def scene_reconstruction(dataset, opt, hyper, pipe, testing_iterations, saving_iterations,

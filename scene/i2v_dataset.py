@@ -92,12 +92,16 @@ class FourDGSdataset(Dataset):
         
         frame_list = range(frame_num)
         pose0_im_names = [pose0_dir + f'{x}.png' for x in frame_list]
+        print('pos0_im_names:',pose0_im_names)
         idx_list = range(frame_num)
         if not os.path.exists(pose0_im_names[0]): # check 0 index
             pose0_im_names = pose0_im_names[1:] + [pose0_dir + f'{frame_num}.png'] # use 1 index
             idx_list = list(idx_list)[1:] + [frame_num]
 
         base_dir=f'./data/{self.name}_sync'
+        if not os.path.exists(base_dir):
+            base_dir=f'./data/{self.name}_harm'
+        print('args.frame_num:',frame_num)
 
         syncdreamer_im = []
         # for fname in t0_im_names:

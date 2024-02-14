@@ -66,6 +66,6 @@ if __name__ == '__main__':
                 final_rgba = carved_image
                 
                 # write image
-                out_rgba = os.path.join(opt.path, out_base + f'_{idx}_rgba.png')
+                out_rgba = os.path.join(opt.path, out_base + f'_0_{idx}_rgba.png')
                 cv2.imwrite(out_rgba, final_rgba)
                 print('out path:',out_rgba)

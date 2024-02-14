@@ -25,6 +25,8 @@ class Zero123(nn.Module):
         self.device = device
         self.fp16 = fp16
         self.dtype = torch.float16 if fp16 else torch.float32
+        if os.path.exists("/data/users/yyy/Largemodelashawkey/stable-zero123-diffusers"):
+            zero123_path="/data/users/yyy/Largemodelashawkey/stable-zero123-diffusers"
         self.pipe = Zero123Pipeline.from_pretrained(            
             zero123_path,
             variant="fp16_ema" if self.fp16 else None,

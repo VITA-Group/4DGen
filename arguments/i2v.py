@@ -20,8 +20,8 @@ OptimizationParams = dict(
 )
 
 ModelParams = dict(
-    frame_num = 16,
-    name="rose",
+    frame_num = 14,
+    name="toy0",
     rife=False,
 )
 
@@ -44,6 +44,6 @@ ModelHiddenParams = dict(
      'grid_dimensions': 2,
      'input_coordinate_dim': 4,
      'output_coordinate_dim': 32,
-     'resolution': [64, 64, 64, 8]  #8 is frame numbers/2
+     'resolution': [64, 64, 64, 7]  #8 is frame numbers/2
     }
 )
