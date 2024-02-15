@@ -51,7 +51,7 @@ Use [stable diffusion-XL](https://huggingface.co/stabilityai/stable-diffusion-xl
 
 **Image-To-4D data prepartion**
 ```bash
-python image_to_video.py --name {image path}  #It may be necessary to try multiple seeds to obtain the desired results.
+python image_to_video.py --data_path {your image.png} --name {file name}  #It may be necessary to try multiple seeds to obtain the desired results.
 ```
 
 **Preprocess data format for training** 
