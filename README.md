@@ -34,7 +34,7 @@ pip install ./simple-knn
 # install kaolin for chamfer distance (optional)
 # https://kaolin.readthedocs.io/en/latest/notes/installation.html
 # CHANGE the torch and CUDA toolkit version if yours are different
-pip install kaolin -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-1.12.1_cu116.html
+# pip install kaolin -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-1.12.1_cu116.html
 ```
 
 ## Data Preparation
@@ -97,8 +97,16 @@ bash eval.bash  #please change file paths before running
 ## Result ##
 We show part of results in our [web pages](https://vita-group.github.io/4DGen/).
 
-The text-to-4d results are below:
+Image-to-4D results:
+| frontview_mario   | multiview_mario   |
+| :----------------:|:-----------------:|
+| ![Alt text 1](docs/static/media/mario.gif) | ![Alt text 2](docs/static/media/multiview_mario.gif) |
 
+Text-to-4D results:
+We first use stable-diffusion-xl to generate a static image. Prompt is 'an emoji of a baby panda, 3d model, front view'. 
+| frontview_panda   | multiview-panda   |
+| :----------------:|:-----------------:|
+| ![Alt text 3](docs/static/media/panda_pose0.gif) | ![Alt text 4](docs/static/media/panda_multiview.gif) |
 
 
 
