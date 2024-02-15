@@ -103,6 +103,7 @@ Image-to-4D results:
 | ![Alt text 1](docs/static/media/mario.gif) | ![Alt text 2](docs/static/media/multiview_mario.gif) |
 
 Text-to-4D results:
+
 We first use stable-diffusion-xl to generate a static image. Prompt is 'an emoji of a baby panda, 3d model, front view'. 
 | frontview_panda   | multiview-panda   |
 | :----------------:|:-----------------:|
