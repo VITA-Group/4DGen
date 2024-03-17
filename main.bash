@@ -1,3 +1,13 @@
+#optional  image-to-4D data prepocess
+#remove background
+python preprocess.py --path /data/users/yyy/4DGen_git/4DGen/exp_data/fish.jpg --recenter True
+
+#generate videos by svd
+python image_to_video.py --data_path /data/users/yyy/4DGen_git/4DGen/exp_data/fish.jpg_pose0/fish.png --name clown_fish 
+#svd results highly rely on random seed. Pick the best result.
+
+
+
 cd 4DGen
 mkdir data
 export name="fish"
@@ -56,4 +66,7 @@ python evaluation.py  --model clip_t --input_data_path $input_data_path --datase
 
 input_data_path="${pred_list_data_path}/back/front"
 python evaluation.py  --model clip_t --input_data_path $input_data_path --dataset $name --direction back --save_name ${name}
+
+#xclip
+python xclip.py --video_path ./output/fish16_13:50:01/video/ours_3000/multiview.mp4 --prompt a swimming fish
 
