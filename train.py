@@ -50,6 +50,8 @@ def scene_reconstruction(dataset, opt, hyper, pipe, testing_iterations, saving_i
     print(f'Start training of stage {stage}: ')
     zero123 = Zero123('cuda')
     dir=f'data/{args.name}_pose0/'
+    if not os.path.exists(dir):
+        dir=f'data/{args.name}_rgba_pose0/'
     # dir=f'data/{args.name}_rgba_pose0/'
     # if args.i2v:
     #     frame_list=range(1, 1 + args.frame_num)
@@ -450,20 +452,24 @@ if __name__ == "__main__":
     parser.add_argument("--checkpoint_iterations", nargs="+", type=int, default=[])
     parser.add_argument("--start_checkpoint", type=str, default = None)
     parser.add_argument('-e', "--expname", type=str, default = "")
-    parser.add_argument("--configs", type=str, default = "arguments/ours/i2v_xdj.py")
-    parser.add_argument("--yyypath", type=str, default = "")
+    parser.add_argument("--configs", type=str, default = "arguments/ours/i2v.py")
     parser.add_argument("--t0_frame0_rate", type=float, default = 1)
-    parser.add_argument("--name_override", type=str, default="")
+    parser.add_argument("--name_override", type=str, default=None)
     parser.add_argument("--sds_ratio_override", type=float, default=-1)
     parser.add_argument("--sds_weight_override", type=float, default=-1)
     parser.add_argument("--iteration", default=-1, type=int)
+    #parser.add_argument("--smooth_loss", default=False)
     args = parser.parse_args(sys.argv[1:])
     args.save_iterations.append(args.iterations - 1)
     if args.configs:
         import mmcv
-        from utils.params_utils import merge_hparams
+        from utils.params_utils import merge_hparams,merge_hparams2
         config = mmcv.Config.fromfile(args.configs)
         args = merge_hparams(args, config)
+
+    if args.name_override!=None:
+        args.name=args.name_override
+    print('args.name:',args.name)
     if args.name_override != '':
         args.name = args.name_override
     if args.sds_ratio_override != -1:

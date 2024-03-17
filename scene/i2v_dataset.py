@@ -88,6 +88,8 @@ class FourDGSdataset(Dataset):
         self.static=static
     
         pose0_dir=f'data/{self.name}_pose0/'
+        if not os.path.exists(pose0_dir):
+            pose0_dir=f'data/{self.name}_rgba_pose0/'
         # pose0_dir=f'data/{self.name}_rgba_pose0/'
         
         frame_list = range(frame_num)
@@ -112,6 +114,9 @@ class FourDGSdataset(Dataset):
                 li = []
                 for view_idx in range(16):
                     fname = os.path.join(base_dir, f"{frame_idx}_0_{view_idx}_rgba.png")
+                    if not os.path.exists(fname):
+                        fname=os.path.join(base_dir, f"{self.name}{frame_idx}_0_{view_idx}_rgba.png")
+                    #print(fname)
                     im = Image.open(fname).resize((self.W, self.H))#.convert('RGB')
                     # use RGBA
                     ww = self.T(im)
@@ -121,6 +126,7 @@ class FourDGSdataset(Dataset):
                 li = torch.stack(li, dim=0)#.permute(0, 2, 3, 1)
                 syncdreamer_im.append(li)
             self.syncdreamer_im = torch.stack(syncdreamer_im, 0) # [fn, 16, 3, 512, 512]
+            
         else:
             #sync only read frame0
             # (dejia): not used

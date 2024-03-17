@@ -142,7 +142,7 @@ class Eval():
         super().__init__()
         self.clip=CLIP('cuda')
     
-    def CLIP_T(self,input_data_path,name=None,direction=None):
+    def CLIP_T(self,input_data_path,name=None,direction=None,save_name=None):
         #input:data path, includes n images
         input_data=glob.glob(f'{input_data_path}/*.png')
         input_data=sorted(input_data,key=lambda info: (int(info.split('/')[-1].split('.')[0])))
@@ -158,15 +158,17 @@ class Eval():
         clip_t_loss=loss_total/(len(input_data)-1)
         if name!=None:
             print('Dataset:',name,"   direction:",direction,"   clip_t:",clip_t_loss)
-            save_data='Dataset:'+name+"   direction:"+direction+"   clip_t:"+str(clip_t_loss)+'\n'
-            with open('/home/yyy/data/4dgen_exp_pl/4dgen_exp/CLIP_Loss/output.txt', 'a+') as file:
+            save_data='  Dataset:'+name+"   direction:"+direction+"   clip_t:"+str(clip_t_loss)+'\n'
+            if save_name!=None:
+                save_data='name:'+save_name+save_data
+            with open('./output.txt', 'a+') as file:
                 file.write(save_data)
         else:
             print("clip_t:",clip_t_loss)
     
     
             
-    def CLIP_(self,gt_list_data_path,pred_list_data_path,name=None):
+    def CLIP_(self,gt_list_data_path,pred_list_data_path,name=None,save_name=None):
         #input:
         #gt_list_data_path, file path includes n frames
         #pred_list_data_path,file path includes n files, each file include m pose images
@@ -195,8 +197,10 @@ class Eval():
         
         if name!=None:
             print('Datset:',name,"   clip:",loss_all_frame_avg)
-            save_data='Datset:'+name+"   clip:"+str(loss_all_frame_avg)+'\n'
-            with open('/home/yyy/data/4dgen_exp_pl/4dgen_exp/CLIP_Loss/output.txt', 'a+') as file:
+            save_data='   Datset:'+name+"   clip:"+str(loss_all_frame_avg)+'\n'
+            if save_name!=None:
+                save_data='name:'+save_name+save_data
+            with open('./output.txt', 'a+') as file:
                 file.write(save_data)
             
 if __name__ == "__main__":
@@ -207,13 +211,14 @@ if __name__ == "__main__":
     parser.add_argument("--gt_list_data_path",default='rose', type=str)
     parser.add_argument("--pred_list_data_path",default='rose', type=str)
     parser.add_argument("--input_data_path",default='rose', type=str)
+    parser.add_argument("--save_name",default=None)
     args = parser.parse_args()
 
     eval=Eval()
     if args.model=='clip':
-        eval.CLIP_(args.gt_list_data_path,args.pred_list_data_path,args.dataset)
+        eval.CLIP_(args.gt_list_data_path,args.pred_list_data_path,args.dataset,args.save_name)
     elif args.model=='clip_t':
-        eval.CLIP_T(args.input_data_path,args.dataset,args.direction)
+        eval.CLIP_T(args.input_data_path,args.dataset,args.direction,args.save_name)
         
         
 

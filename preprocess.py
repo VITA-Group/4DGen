@@ -33,7 +33,7 @@ if __name__ == '__main__':
         files = [opt.path]
         out_dir = os.path.dirname(opt.path)
     
-    savedir=opt.path+'/rgba/'
+    savedir=opt.path+'_pose0/'
     os.makedirs(savedir,exist_ok=True)
     for file in files:
         if file.endswith('jpg') or  file.endswith('png'):
