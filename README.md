@@ -38,7 +38,7 @@ pip install ./simple-knn
 ```
 
 ## Example Case Script
-We have organized a complete pipeline script in **main.bash** for your reference.
+We have organized a complete pipeline script in **main.bash** for your reference. You need to modify the necessary paths.
 
 
 ## Data Preparation
