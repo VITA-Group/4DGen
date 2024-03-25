@@ -5,7 +5,7 @@ Authors: Yuyang Yin, Dejia Xu, Zhangyang Wang, Yao Zhao, Yunchao Wei
 
 <!-- ![overview](https://raw.githubusercontent.com/VITA-Group/4DGen/main/docs/static/media/task.a51c143187610723eb8f.png) -->
 
-![overview](docs/static/media/task.png)
+![overview](docs/static/media/task.b31b8f9ca2816ed0074f.png)
 
 ## News
 - `2023/12/28`  First release code and paper.
