@@ -127,6 +127,10 @@ This work is built on many amazing research works and open-source projects, than
 - https://github.com/graphdeco-inria/diff-gaussian-rasterization
 - https://github.com/threestudio-project/threestudio
 
+## Our new work
+We release our new work [Diffusion4D: Fast Spatial-temporal Consistent 4D Generation via Video Diffusion Models](Diffusion4D: Fast Spatial-temporal Consistent 4D Generation via Video Diffusion Models). You can click project page to learn more detail. Thanks for your suppport.
+
+
 ## Citation
 If you find this repository/work helpful in your research, please consider citing the paper and starring the repo ⭐.
 
