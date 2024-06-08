@@ -8,6 +8,7 @@ Authors: Yuyang Yin, Dejia Xu, Zhangyang Wang, Yao Zhao, Yunchao Wei
 ![overview](docs/static/media/task.b31b8f9ca2816ed0074f.png)
 
 ## News
+- `2024/5/26`   Release our new work. [Diffusion4D: Fast Spatial-temporal Consistent 4D Generation via Video Diffusion Models](https://vita-group.github.io/Diffusion4D/). You can click project page to learn more detail.
 - `2023/12/28`  First release code and paper.
 - `2024/2/14`   Update text-to-4d and image-to-4d functions and cases.
 - `2024/3/17`   Add a completed example script.
@@ -127,8 +128,7 @@ This work is built on many amazing research works and open-source projects, than
 - https://github.com/graphdeco-inria/diff-gaussian-rasterization
 - https://github.com/threestudio-project/threestudio
 
-## Our new work
-We release our new work [Diffusion4D: Fast Spatial-temporal Consistent 4D Generation via Video Diffusion Models](https://vita-group.github.io/Diffusion4D/). You can click project page to learn more detail. Thanks for your suppport.
+
 
 
 ## Citation
