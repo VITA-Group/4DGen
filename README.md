@@ -142,3 +142,7 @@ If you find this repository/work helpful in your research, please consider citin
   year={2023}
 }}
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=VITA-Group/4DGen&type=Date)](https://star-history.com/#VITA-Group/4DGen&Date)
